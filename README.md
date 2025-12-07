@@ -16,6 +16,19 @@ Mi configuración está dividida en varios archivos separados, donde `hyprland.c
 └── window.conf      # Reglas de ventanas y configuración de apariencia.
 ```
 
+
+# Archivo hyprland.conf 
+
+```
+source=~/.config/hypr/colors.conf
+source=~/.config/hypr/general.conf
+source=~/.config/hypr/env.conf
+source=~/.config/hypr/exec.conf
+source=~/.config/hypr/keybinds.conf
+source=~/.config/hypr/window.conf
+```
+
+
 *(Nota: El archivo `colors.conf` generado por Matugen se incluiría típicamente aquí y se importaría en `hyprland.conf`.)*
 
 -----
