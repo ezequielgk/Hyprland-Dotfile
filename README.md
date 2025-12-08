@@ -1,39 +1,21 @@
-# ⚙️ Mis Dotfiles de Hyprland
+# 💻 Dotfiles de mi Entorno Hyprland
 
+Este repositorio contiene los archivos de configuración (`dotfiles`) para mi entorno de escritorio **tiling** basado en **Hyprland**. El objetivo es ofrecer una experiencia de usuario rápida, modular y estéticamente coherente.
 
-Este repositorio contiene todos los archivos de configuración (`dotfiles`) que utilizo para mi entorno de escritorio basado en el *tiling window manager* Hyprland. He optado por una estructura de archivos **modular** y **separada** para mantener la **organización** y la **fácil mantenimiento**.
+## 🌟 Componentes Principales
 
-##  Estructura
-Mi configuración está dividida en varios archivos separados, donde `hyprland.conf` actúa como el archivo principal que importa la configuración de los demás.
+La configuración se divide en archivos Markdown separados para cada componente importante. Para ver los detalles de configuración, haz clic en el archivo de documentación correspondiente:
 
-```
-~/.config/hypr/
-├── hyprland.conf    # Archivo principal, importa los demás.
-├── env.conf         # Definición de variables de entorno ($ENV).
-├── exec.conf        # Comandos que se ejecutan al inicio (autostart).
-├── general.conf     # Configuración general, efectos, animaciones, etc.
-├── keybinds.conf    # Atajos de teclado y enlaces a QuickShell/Noctalia.
-└── window.conf      # Reglas de ventanas y configuración de apariencia.
-```
+| Componente | Archivo de Documentación | Descripción |
+| :--- | :--- | :--- |
+| **Hyprland** | [Hypr.md](./Hypr.md) | El *tiling window manager* central y principal de mi entorno. |
+| **Neovim** | [nvim.md](./nvim.md) | Mi editor de texto principal, configurado como un potente IDE modular. |
+| **Ghostty** | [ghostty.md](./ghostty.md) | Mi emulador de terminal principal. |
+| **Fastfetch** | [fetch.md](./fetch.md) | Utilidad para mostrar información del sistema al iniciar la terminal. |
 
+---
 
-# Archivo hyprland.conf 
+## ✨ Características Destacadas del Entorno
 
-```
-source=~/.config/hypr/colors.conf
-source=~/.config/hypr/general.conf
-source=~/.config/hypr/env.conf
-source=~/.config/hypr/exec.conf
-source=~/.config/hypr/keybinds.conf
-source=~/.config/hypr/window.conf
-```
-
-
-*(Nota: El archivo `colors.conf` generado por Matugen se incluiría típicamente aquí y se importaría en `hyprland.conf`.)*
-
------
-
-##  Características
-  * **Organización Modular:** Toda la configuración está separada en archivos temáticos (ejecución, variables, atajos) para una gestión clara.
-  * **Gestión de Colores con Matugen:** Utilizo **Matugen** para generar un esquema de colores dinámico basado en mi fondo de pantalla actual. Este esquema genera un archivo (`colors.conf` o similar) que inyecta las variables de color usadas en el entorno y en `general.conf`.
-  * **Integración de Noctalia/QuickShell:** El archivo `keybinds.conf` está configurado para integrar comandos y funciones de la *shell* **Noctalia** y su *launcher* **QuickShell**.
+* **Modularidad Total:** La configuración de Hyprland y Neovim está dividida en módulos temáticos para facilitar la organización y el mantenimiento.
+* **Coherencia Visual (Matugen):** Se utiliza **Matugen** para generar esquemas de color dinámicos basados en el fondo de pantalla, asegurando que todos los componentes utilicen la misma paleta.
