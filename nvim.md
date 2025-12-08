@@ -14,4 +14,4 @@ Mi configuración de Neovim se basa en el framework:
 La coherencia visual con el resto del entorno Hyprland se logra gracias a la siguiente cadena de herramientas:
 
 1.  **Matugen** genera la paleta de colores a nivel de sistema (basada en el fondo de pantalla).
-2.  **pywalfox** se utiliza para comunicar esa paleta de colores.
+2.  **Python Pywal** se utiliza para comunicar esa paleta de colores.
