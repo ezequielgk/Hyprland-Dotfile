@@ -1,39 +1,8 @@
-# ⚙️ Mis Dotfiles de Hyprland
+# ℹ️ Configuración de Fastfetch
 
+Fastfetch es la utilidad ligera que utilizo para mostrar información esencial del sistema (distribución, kernel, uso de memoria, etc.) al abrir una nueva terminal.
 
-Este repositorio contiene todos los archivos de configuración (`dotfiles`) que utilizo para mi entorno de escritorio basado en el *tiling window manager* Hyprland. He optado por una estructura de archivos **modular** y **separada** para mantener la **organización** y la **fácil mantenimiento**.
+## 🎨 Integración con el Esquema de Colores
 
-##  Estructura
-Mi configuración está dividida en varios archivos separados, donde `hyprland.conf` actúa como el archivo principal que importa la configuración de los demás.
-
-```
-~/.config/hypr/
-├── hyprland.conf    # Archivo principal, importa los demás.
-├── env.conf         # Definición de variables de entorno ($ENV).
-├── exec.conf        # Comandos que se ejecutan al inicio (autostart).
-├── general.conf     # Configuración general, efectos, animaciones, etc.
-├── keybinds.conf    # Atajos de teclado y enlaces a QuickShell/Noctalia.
-└── window.conf      # Reglas de ventanas y configuración de apariencia.
-```
-
-
-# Archivo hyprland.conf 
-
-```
-source=~/.config/hypr/colors.conf
-source=~/.config/hypr/general.conf
-source=~/.config/hypr/env.conf
-source=~/.config/hypr/exec.conf
-source=~/.config/hypr/keybinds.conf
-source=~/.config/hypr/window.conf
-```
-
-
-*(Nota: El archivo `colors.conf` generado por Matugen se incluiría típicamente aquí y se importaría en `hyprland.conf`.)*
-
------
-
-##  Características
-  * **Organización Modular:** Toda la configuración está separada en archivos temáticos (ejecución, variables, atajos) para una gestión clara.
-  * **Gestión de Colores con Matugen:** Utilizo **Matugen** para generar un esquema de colores dinámico basado en mi fondo de pantalla actual. Este esquema genera un archivo (`colors.conf` o similar) que inyecta las variables de color usadas en el entorno y en `general.conf`.
-  * **Integración de Noctalia/QuickShell:** El archivo `keybinds.conf` está configurado para integrar comandos y funciones de la *shell* **Noctalia** y su *launcher* **QuickShell**.
+* **Personalización:** El *output* está configurado para mostrar solo la información más relevante, de forma rápida y concisa.
+* **Temas con Matugen:** La configuración de Fastfetch en `~/.config/fastfetch/config` está enlazada al esquema de colores de **Matugen**. Esto asegura que el arte ASCII y los textos informativos se muestren con la paleta de colores actual del sistema, manteniendo la coherencia visual.
