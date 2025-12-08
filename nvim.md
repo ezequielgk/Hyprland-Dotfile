@@ -1,39 +1,17 @@
-# ⚙️ Mis Dotfiles de Hyprland
+# ✍️ Configuración de Neovim
 
+Neovim es mi editor de texto principal. Está configurado para funcionar como un entorno de desarrollo integrado (IDE) potente, ligero y con alta integración con el entorno de terminal.
 
-Este repositorio contiene todos los archivos de configuración (`dotfiles`) que utilizo para mi entorno de escritorio basado en el *tiling window manager* Hyprland. He optado por una estructura de archivos **modular** y **separada** para mantener la **organización** y la **fácil mantenimiento**.
+## 🛠️ Framework y Componentes
 
-##  Estructura
-Mi configuración está dividida en varios archivos separados, donde `hyprland.conf` actúa como el archivo principal que importa la configuración de los demás.
+Mi configuración de Neovim se basa en el framework:
 
-```
-~/.config/hypr/
-├── hyprland.conf    # Archivo principal, importa los demás.
-├── env.conf         # Definición de variables de entorno ($ENV).
-├── exec.conf        # Comandos que se ejecutan al inicio (autostart).
-├── general.conf     # Configuración general, efectos, animaciones, etc.
-├── keybinds.conf    # Atajos de teclado y enlaces a QuickShell/Noctalia.
-└── window.conf      # Reglas de ventanas y configuración de apariencia.
-```
+* **Framework:** **NvChad** (un *framework* minimalista y rápido para Neovim).
+* **Gestión de Colores:** Utilizo el plugin **Matuvim** para gestionar el esquema de colores.
 
+## 🎨 Coherencia Visual Dinámica
 
-# Archivo hyprland.conf 
+La coherencia visual con el resto del entorno Hyprland se logra gracias a la siguiente cadena de herramientas:
 
-```
-source=~/.config/hypr/colors.conf
-source=~/.config/hypr/general.conf
-source=~/.config/hypr/env.conf
-source=~/.config/hypr/exec.conf
-source=~/.config/hypr/keybinds.conf
-source=~/.config/hypr/window.conf
-```
-
-
-*(Nota: El archivo `colors.conf` generado por Matugen se incluiría típicamente aquí y se importaría en `hyprland.conf`.)*
-
------
-
-##  Características
-  * **Organización Modular:** Toda la configuración está separada en archivos temáticos (ejecución, variables, atajos) para una gestión clara.
-  * **Gestión de Colores con Matugen:** Utilizo **Matugen** para generar un esquema de colores dinámico basado en mi fondo de pantalla actual. Este esquema genera un archivo (`colors.conf` o similar) que inyecta las variables de color usadas en el entorno y en `general.conf`.
-  * **Integración de Noctalia/QuickShell:** El archivo `keybinds.conf` está configurado para integrar comandos y funciones de la *shell* **Noctalia** y su *launcher* **QuickShell**.
+1.  **Matugen** genera la paleta de colores a nivel de sistema (basada en el fondo de pantalla).
+2.  **pywalfox** se utiliza para comunicar esa paleta de colores.
